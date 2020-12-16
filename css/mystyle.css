@@ -1,0 +1,283 @@
+.body {
+  font-family: 'Open Sans', sans-serif;
+}
+header {
+  /* position: relative; */
+  display: block;
+  /*заменить потом на 100%*/
+  height: 835px;
+
+  background-image: url("..//img/home-1-slider-image-1.jpg");
+  background-repeat: no-repeat; 
+  background-position: 0px 0px;
+  background-size: cover; 
+  background-color: transparent;
+  /* overflow: visible; */
+} 
+/* ********************************* */
+/* ************************** */
+/* Собственно сам слайдер */
+/* .slider{
+    /* max-width: 80%; */
+    /* position: relative;
+    
+    height:  100%; */
+    /* margin-bottom: 130px; */
+    /* margin: auto; */
+/* }  */
+/* Картинка маштабируется по отношению к родительскому элементу */
+/* .slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+} */
+
+/* Кнопки вперед и назад */
+/* .slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+} */
+
+
+/* При наведении на кнопки добавляем фон кнопок */
+
+/* .slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+} */
+/* Кружочки */
+
+/* .slider-dots {
+  text-align: center;
+ 
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+} */
+
+
+/* Анимация слайдов */
+
+/* .slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+} */
+
+/* *************************************** */
+/* ********************************* */
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+  margin: auto;
+}
+
+/*** Начало header menu***/
+header .wrapper {
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+
+  background-color: transparent;
+}
+
+.main-menu {
+  display: flex;
+  width: auto;
+  height: auto;
+  bottom: auto;
+
+}
+
+.main-menu a {
+	
+	font-size: 16px;
+  padding: 20px;
+
+  transition: color 500ms ease;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+
+.main-menu a:hover {
+	color: tan;
+}
+/* Конец header menu*/
+/* *********************** */
+.slide {
+  display: block;
+  height: 100%;
+}
+
+.s1-box {
+
+  position: absolute;
+  left: auto;
+  top: 10%;
+  right: 0%;
+  bottom: 0%;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+} 
+
+.s1-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.s1-h1 {
+  flex-wrap: nowrap;
+  font-family: Kurale, sans-serif;
+  color: #fff;
+  font-size: 80px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 6px #000;
+}
+
+.s1-p {
+  max-width: 800px;
+  margin-top: 20px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.s1-button {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  transition: border-color 500ms ease, background-color 500ms ease;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.s1-button:hover {
+  border-color: tan;
+  background-color: tan;
+}
+/* ************************ */
+/* Слайдер */
+
+
+
+
+/* .s1_slider {
+  height: 100%;
+/* }* */
+
+/* .slide {
+  height: 100%;
+} */
+
+/* .slide-1 {
+  height: 100%;
+} */
+
+/* .s1_slider_bg {
+  height: 100%;
+  background-image: url("img/home-1-slider-image-1.jpg");
+  background-position: 0px 0px;
+  background-size: cover;
+} */
+
+/* .s1_slider_bg._2 {
+  background-image: url("img/home-1-slider-image-2.jpg");
+} */
+
+/* .s1_slider_bg._3 {
+  background-image: url("img/home-1-slider-image-3.jpg");
+} */ 
+/************************
+ /* .s1_slider {
+  height: 100%;
+} */
+
+/* .slide {
+  display: block;
+  height: 100%;
+  background-image: url("../img/home-1-slider-image-1.jpg");
+  background-repeat: no-repeat;  */
+  /* background-position: 0px 0px;
+  background-size: cover; 
+  background-color: transparent; */
+  
+/* } */
+
+/* .s1_slider_bg._2 {
+  background-image: url("img/home-1-slider-image-2.jpg");
+}
+
+.s1_slider_bg._3 {
+  background-image: url("img/home-1-slider-image-3.jpg");
+}  */
+
