@@ -42,22 +42,22 @@ let cardsData = [
     {   
         imgUrl: 'img/h2-custom-icon-5.png',
         title: 'ТИПЫ КОФЕ',
-        text: 'Владеем фермой в Колумбии, что позволяет нам ещё больше углубиться в научные исследования и эксперименты.'
+        text: 'Существуют тысячи сортов кофе, причем не следует путать понятия вид, разновидность и сорт. На кофейных плантациях мира из 40 природных видов выращивают всего три — арабика, робуста и либерика.'
     },
     {
         imgUrl: 'img/h2-custom-icon-6.png',
         title: 'ВИДЫ ЗЕРЕН',
-        text: 'Жарим на ростерах Тробрат, в создании которых когда-то помогали. Каждую обжарку мы фиксируем в программе.'
-    },
-    {
-        imgUrl: 'img/h2-custom-icon-7.png',
-        title: 'НА ВЫНОС',
-        text: 'Скорость приготовления кофе и его качество сильно превосходит конкурентов.'
+        text: 'Чем сильнее обжарка, тем труднее различить оригинальный вкус и аромат зерна, поэтому низкосортные смеси всегда подвергаются сильной термообработке. Легкая и средняя обжарка характерна для кенийского, эфиопского, никарагуанского кофе.'
     },
     {
         imgUrl: 'img/h2-custom-icon-8.png',
+        title: 'НАВЫНОС',
+        text: 'Наречие "навынос" означает, что вы можете покупку унести с собой. Обычно так говорят о еде и напитках из кафе или ресторанов. Пишется слово слитно.'
+    },
+    {
+        imgUrl: 'img/h2-custom-icon-7.png',        
         title: 'СЛАДОСТИ',
-        text: 'Готовим свежие сладости по свои собственным рецептам. Всегда свежая выпечка для бодрого дня.'
+        text: 'Парочка модных французских печеньиц-макарон отлично подойдут для колумбийского кофе.'
     }
 ]; 
 
@@ -145,4 +145,50 @@ for (let i = 0; i < newCardsData.length; i++) {
     newCardList.appendChild(newCardItem);
 };
 
+
+let textCardsData = [
+    {
+        textCountity: '250',
+        title: 'ТИПЫ КОФЕ',
+        text: 'Владеем фермой в Колумбии, что позволяет нам ещё больше углубиться в научные исследования и эксперименты.'
+    },
+    {
+        textCountity: '25',
+        title: 'ВИДЫ ЗЕРЕН',
+        text: 'Жарим на ростерах Тробрат, в создании которых когда-то помогали. Каждую обжарку мы фиксируем в программе.'
+    },
+    {
+        textCountity: '321',
+        title: 'СЛАДОСТИ',
+        text: 'Готовим свежие сладости по свои собственным рецептам. Всегда свежая выпечка для бодрого дня.'
+    },
+    {
+        textCountity: '35',
+        title: 'НАВЫНОС',
+        text: 'Скорость приготовления кофе и его качество сильно превосходит конкурентов.'
+    }
+
+];
+
+let textCreateCard = function (typeJob) {
+    let textListItem = makeElement('div', 'typeJob');
+    
+    let textCountity = makeElement('div', 'typeJob__textCountity', typeJob.textCountity);
+    textListItem.appendChild(textCountity);
+
+    let title = makeElement('h3', 'typeJob__title', typeJob.title);
+    textListItem.appendChild(title);
+
+    let text = makeElement('p', 'typeJob__text', typeJob.text);
+    textListItem.appendChild(text);
+
+    return textListItem;
+};
+
+let textCardList = document.querySelector('.typsJobs');
+
+for (let i = 0; i < textCardsData.length; i++) {
+    let textCardItem = textCreateCard(textCardsData[i]);
+    textCardList.appendChild(textCardItem);
+};
 
