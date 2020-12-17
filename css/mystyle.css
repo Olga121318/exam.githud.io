@@ -290,7 +290,7 @@ text-align: center;
   /* list-style: none; */
 }
 
-.service,
+.service
  {
   position: relative; 
   width: 270px;
@@ -349,7 +349,7 @@ text-align: center;
   text-align: center; */ 
 
   background-image: url("../img/h1-bacground-img-1.jpg");
-
+  background-attachment: fixed;
   padding-top: 10%;
   padding-bottom: 10%;
   background-position: 0% 0%;
@@ -357,6 +357,7 @@ text-align: center;
   background-attachment: fixed;
   /* -webkit-transition: opacity 200ms ease; */
   transition: opacity 200ms ease;
+  
 } 
 .s2-blog-wrapper {
   margin-right: auto;
@@ -461,6 +462,22 @@ a:hover {
   
 }
 
+.promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+  width: auto;
+  height: auto;
+
+  background-image: url('../img/h1-bacground-img-2.jpg');
+  background-color: transparent;
+  background-attachment: fixed;
+}
 
 
 
