@@ -573,7 +573,7 @@ a:hover {
   transition: box-shadow 500ms ease, transform 500ms ease;
   transition: box-shadow 500ms ease, transform 500ms ease, -webkit-transform 500ms ease;
 }
-.good__button {
+.good__metaLink {
   padding: 15px 40px;
   background-color: tan;
   -webkit-transition: background-color 500ms ease;
@@ -582,11 +582,11 @@ a:hover {
   text-transform: uppercase;
 }
 
-.good__button:hover {
+.good__metaLink:hover {
   background-color: #000;
 }
 
-.good__image {
+.good__elementGood {
   width: 100%;
   height: 300px;
   background-image: url("..img/uproduct-img-8-800x800.png");

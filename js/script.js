@@ -102,6 +102,7 @@ let newCardsData = [
         text: 'Теория эманации диссонирует незначительный эйдос. Миракль образует конструктивный импрессионизм. Пушкин подарил Гоголю фабулу "Мертвых душ" не потому, что художественное переживание изящно продолжает самодостаточный миракль. Богатство мировой литературы от Платона до Ортеги-и-Гассета свидетельствует о том, что канон аккумулирует невротический "кодекс деяний".',
         metaLink: 'ЧИТАТЬ ДАЛЕЕ...'
     },
+
     {
         imgUrl: 'img/blog-1-img-1.jpg',
         title: 'МАСТЕР-КЛАСС',
@@ -194,25 +195,29 @@ for (let i = 0; i < textCardsData.length; i++) {
 
 let goodsData =[
     {
-        titleLink: 'В КОРЗИНУ',
+        elementGood: '',
+        metaLink: 'В КОРЗИНУ',
         title: 'QUATEMALA COFFE',
         price: '18$'
 
     },
     {
-        titleLink: 'В КОРЗИНУ',
+        elementGood: '',
+        metaLink: 'В КОРЗИНУ',
         title: 'COLUMBIA COFFE',
         price: '18$'
 
     },
     {
-        titleLink: 'В КОРЗИНУ',
+        elementGood: '',
+        metaLink: 'В КОРЗИНУ',
         title: 'KENYA COFFE',
         price: '18$'
 
     },
     {
-        titleLink: 'В КОРЗИНУ',
+        elementGood:  '',
+        metaLink: 'В КОРЗИНУ',
         title: 'EFIOPIA COFFE',
         price: '18$'
 
@@ -220,18 +225,15 @@ let goodsData =[
 
 ];
 
-let goodCreateCard = function (good) {
+let goodsElement = function (good) {
     let goodListItem = makeElement('div', 'good');
 
-    let picture = makeElement('div', 'good__image');
-    goodListItem.appendChild(picture);
+    let elementGood = makeElement('div', 'good__elementGood', good.elementGood);
+    goodListItem.appendChild(elementGood);
 
-
-
-
-    let titleLink = makeElement('a', 'good__button', good.button);
-    titleLink.href = '#';
-    goodListItem.appendChild(titleLink);
+    let metaLink = makeElement('a', 'good__metaLink', good.metaLink);
+    metaLink.href = '#';
+    goodListItem.appendChild(metaLink);
 
     let title = makeElement('h3', 'good__title', good.title);
     goodListItem.appendChild(title);
@@ -239,26 +241,75 @@ let goodCreateCard = function (good) {
     let price = makeElement('div', 'good__price', good.price);
     goodListItem.appendChild(price);
 
+
     return goodListItem;
 };
 
 let goodCardList = document.querySelector('.goods');
 
 for (let i = 0; i < goodsData.length; i++) {
-    let goodCardItem = goodCreateCard(goodsData[i]);
+    let goodCardItem = goodsElement(goodsData[i]);
     goodCardList.appendChild(goodCardItem);
 };
 
-
-let backgroundPicture = ['img/product-guatemala.png',
-    'img/product-columbia.png',
-    'img/product-kenya.png',
-    'img/product-efiopia.png'
-
+let logoData = [
+        {imgUrl: 'img/clients-img-2-hover.png'},
+        {imgUrl: 'img/clients-img-4-hover.png'},
+        {imgUrl: 'img/clients-img-5-hover.png'},
+        {imgUrl: 'img/clients-img-6-hover.png'},
+        {imgUrl: 'img/clients-img-3-hover.png'},
+    {imgUrl: 'img/clients-img-1.png'}
 ];
+let logoElement = function (client) {
+    let logoListItem = makeElement('li', 'client');
 
-for(let i = 0; i < goodsData.length; i++) {
-    let element = document.querySelector('.good__image');
-    element.style.backgroundImg = backgroundPicture[i];
+    let picture = makeElement('img', 'client__img');
+    picture.src = client.imgUrl;
+    picture.alt = client.text;
+    logoListItem.appendChild(picture);
 
+   
+    return logoListItem;
 };
+
+let logoCardList = document.querySelector('.clients');
+
+for (let i = 0; i < logoData.length; i++) {
+    let logoCardItem = logoElement(logoData[i]);
+    logoCardList.appendChild(logoCardItem);
+};
+
+
+
+// let backgroundPicture = ['img/product-guatemala.png',
+//     'img/product-columbia.png',
+//     'img/product-kenya.png',
+//     'img/product-efiopia.png'
+
+// ];
+
+// for (let i = 0; i < goodsData.length; i++) {
+//     function(){
+//     let elementGoodPicture = goodsData[i];
+//     let pictureImg
+//         good__elementGood
+//     }
+    
+    //     element.style.backgroundImg = backgroundPicture[i];
+
+
+
+
+// let elementGoodPicture = goodsData[i]
+// let backgroundPicture = ['img/product-guatemala.png',
+//     'img/product-columbia.png',
+//     'img/product-kenya.png',
+//     'img/product-efiopia.png'
+
+// ];
+
+// for(let i = 0; i < goodsData.length; i++) {
+//     let element = document.querySelector('.good__image');
+//     element.style.backgroundImg = backgroundPicture[i];
+
+// };
