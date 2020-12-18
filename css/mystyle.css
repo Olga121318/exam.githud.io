@@ -522,12 +522,78 @@ a:hover {
   color: tan;
   font-size: 80px;
   line-height: 1;
+
+
+  transform: translateY(-200px) translateY(200px);
+  /* opacity: 1;  */
+  /* transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); */
+  /* transform-style: preserve-3d;  */
 }
 .typeJob__title {
   font-family: Kurale, sans-serif;
   text-transform: uppercase;
 }
 
+.shop {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-image: url("../img/h1-bacground-img-1.jpg");
+  /* background-position: 100% 1ssl00%; */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.shop-contains {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.goods {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.good {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 25%;
+  -ms-flex: 0 25%;
+  flex: 0 25%;
+  -webkit-transition: box-shadow 500ms ease, -webkit-transform 500ms ease;
+  transition: box-shadow 500ms ease, -webkit-transform 500ms ease;
+  transition: box-shadow 500ms ease, transform 500ms ease;
+  transition: box-shadow 500ms ease, transform 500ms ease, -webkit-transform 500ms ease;
+}
+.good__button {
+  padding: 15px 40px;
+  background-color: tan;
+  -webkit-transition: background-color 500ms ease;
+  transition: background-color 500ms ease;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.good__button:hover {
+  background-color: #000;
+}
+
+.good__image {
+  width: 100%;
+  height: 300px;
+  background-image: url("..img/uproduct-img-8-800x800.png");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 
 

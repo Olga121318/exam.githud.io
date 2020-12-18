@@ -58,7 +58,7 @@ let cardsData = [
         imgUrl: 'img/h2-custom-icon-7.png',        
         title: 'СЛАДОСТИ',
         text: 'Парочка модных французских печеньиц-макарон отлично подойдут для колумбийского кофе.'
-    }
+    },
 ]; 
 
 
@@ -192,3 +192,73 @@ for (let i = 0; i < textCardsData.length; i++) {
     textCardList.appendChild(textCardItem);
 };
 
+let goodsData =[
+    {
+        titleLink: 'В КОРЗИНУ',
+        title: 'QUATEMALA COFFE',
+        price: '18$'
+
+    },
+    {
+        titleLink: 'В КОРЗИНУ',
+        title: 'COLUMBIA COFFE',
+        price: '18$'
+
+    },
+    {
+        titleLink: 'В КОРЗИНУ',
+        title: 'KENYA COFFE',
+        price: '18$'
+
+    },
+    {
+        titleLink: 'В КОРЗИНУ',
+        title: 'EFIOPIA COFFE',
+        price: '18$'
+
+    }
+
+];
+
+let goodCreateCard = function (good) {
+    let goodListItem = makeElement('div', 'good');
+
+    let picture = makeElement('div', 'good__image');
+    goodListItem.appendChild(picture);
+
+
+
+
+    let titleLink = makeElement('a', 'good__button', good.button);
+    titleLink.href = '#';
+    goodListItem.appendChild(titleLink);
+
+    let title = makeElement('h3', 'good__title', good.title);
+    goodListItem.appendChild(title);
+
+    let price = makeElement('div', 'good__price', good.price);
+    goodListItem.appendChild(price);
+
+    return goodListItem;
+};
+
+let goodCardList = document.querySelector('.goods');
+
+for (let i = 0; i < goodsData.length; i++) {
+    let goodCardItem = goodCreateCard(goodsData[i]);
+    goodCardList.appendChild(goodCardItem);
+};
+
+
+let backgroundPicture = ['img/product-guatemala.png',
+    'img/product-columbia.png',
+    'img/product-kenya.png',
+    'img/product-efiopia.png'
+
+];
+
+for(let i = 0; i < goodsData.length; i++) {
+    let element = document.querySelector('.good__image');
+    element.style.backgroundImg = backgroundPicture[i];
+
+};
